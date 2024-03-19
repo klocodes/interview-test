@@ -1,0 +1,34 @@
+{
+  "ru": {
+    "validations": {
+      "properties": {
+        "password": "пароль",
+        "passwordConfirmation": "подтверждение пароля",
+        "Passwords": "Пароли",
+        "title": "Заголовок",
+        "description": "Описание",
+        "categoryId": "Категория",
+        "branchId": "Направление",
+        "tags": "Теги",
+        "content": "Контент",
+        "mobileImage": "Изображение для мобильной версии",
+        "published": "Опубликовано",
+        "isMain": "Выводить на главной",
+        "homeImage": "Изображение для главной",
+        "homeMobileImage": "Изображение для главной (мобильная версия)",
+        "image": "Изображение",
+        "readingTime": "Время чтения",
+        "name": "Название",
+        "email": "Email",
+        "metaTitle": "Meta Title",
+        "metaDescription": "Meta Description",
+        "metaKeywords": "Meta Keywords",
+        "subscriptionFormSrc": "Ссылка на форму подписки"
+      },
+      "required": "Необходимо заполнить поле \"{property}\"",
+      "email": "Поле \"{property}\" должно быть валидным email адресом",
+      "sameAs": "{property} не совпадают",
+      "minLength": "Поле \"{property}\" должно содержать не менее {min} символов"
+    }
+  }
+}

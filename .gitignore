@@ -1,0 +1,9 @@
+.env
+.idea
+.DS_Store
+/postgres/data/**
+/postgres/logs/**
+!/postgres/logs/.gitkeep
+/redis/data/**
+/nginx/logs/**
+!/nginx/logs/.gitkeep

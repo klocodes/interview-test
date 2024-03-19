@@ -1,0 +1,25 @@
+$images-path: '/resources/images/';
+$icons-path: '/resources/icons/';
+$fonts-path: '/resources/fonts/';
+
+$palette-primary: #0D6EFDFF;
+$palette-primary-hover: darken($palette-primary, 10%);
+
+$palette-accent: #198754FF;
+$palette-accent-hover: transparentize($palette-accent, .5);
+
+$palette-error: #DC3545FF;
+$palette-error-hover: darken($palette-error, 10%);
+
+$palette-layout: #f5f5f5;
+$palette-box: #ffffff;
+$palette-text: #000;
+$palette-text-accent: #ffffff;
+$palette-text-placeholder: #A9A9A9;
+$palette-border: #e1e1e1;
+$palette-shadow: transparentize(#000, 0.9);
+
+$palette-link: $palette-primary;
+$palette-link-hover: $palette-primary-hover;
+$palette-placeholder: #d3d3d3;
+$palette-accent-placeholder: #fbfbfb;
