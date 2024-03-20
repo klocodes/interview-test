@@ -26,3 +26,11 @@ front-install:
 
 front-build:
 	docker compose run --rm frontend-dev npm run build
+
+test:
+	docker compose run --rm app-cli php artisan test
+
+
+# Консольные команды для работы с данными
+create-user:
+	docker compose run --rm app-cli php artisan app:create-user

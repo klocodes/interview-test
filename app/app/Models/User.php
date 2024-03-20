@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Features\Shared;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -12,7 +12,6 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     public const PASSWORD_MIN_LENGTH = 8;
-    public const PASSWORD_MAX_LENGTH = 32;
 
     /**
      * The attributes that are mass assignable.
