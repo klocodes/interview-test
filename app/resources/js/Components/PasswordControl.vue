@@ -152,7 +152,7 @@ onMounted(() => {
   transition: border .4s ease;
 
   &.--focused {
-    border-bottom: 2px solid $palette-accent;
+    border-bottom: 2px solid $palette-primary;
   }
 
   &.--failed {
@@ -205,7 +205,7 @@ onMounted(() => {
       top: 0;
       bottom: auto;
       font-size: 12px;
-      color: $palette-accent
+      color: $palette-primary
     }
   }
 

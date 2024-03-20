@@ -50,7 +50,7 @@ defineEmits(['update:modelValue'])
     display: block;
     width: 20px;
     height: 20px;
-    border: 1px solid $palette-accent;
+    border: 1px solid $palette-primary;
     transition: border .4s ease;
   }
 
@@ -62,7 +62,7 @@ defineEmits(['update:modelValue'])
     display: block;
     width: 12px;
     height: 12px;
-    background-color: $palette-accent;
+    background-color: $palette-primary;
     opacity: 0;
     transition: opacity .4s ease;
     box-sizing: content-box;
@@ -70,7 +70,7 @@ defineEmits(['update:modelValue'])
 
   &.checked {
     &:before {
-      border-color: $palette-accent-hover;
+      border-color: $palette-primary-hover;
       border-width: 2px;
     }
 

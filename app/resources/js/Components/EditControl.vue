@@ -186,7 +186,7 @@ const handleFocus = (event, value) => {
   transition: border .4s ease;
 
   &.--focused {
-    border-bottom: 2px solid $palette-accent;
+    border-bottom: 2px solid $palette-primary;
   }
 
   &.--failed {
@@ -239,7 +239,7 @@ const handleFocus = (event, value) => {
       top: 0;
       bottom: auto;
       font-size: 12px;
-      color: $palette-accent
+      color: $palette-primary
     }
   }
 
