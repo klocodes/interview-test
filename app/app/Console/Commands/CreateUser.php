@@ -40,7 +40,6 @@ class CreateUser extends Command
         $email = text(
             label: 'Введите email',
             placeholder: 'Email',
-            default: 'test@example.com',
             required: true,
             validate: fn($email) => filter_var($email, FILTER_VALIDATE_EMAIL) ? null : 'Неверный формат email',
         );
