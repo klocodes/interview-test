@@ -6,6 +6,7 @@ import {createInertiaApp} from '@inertiajs/vue3'
 import Toast from "vue-toastification";
 
 import 'vue-toastification/dist/index.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 createInertiaApp({

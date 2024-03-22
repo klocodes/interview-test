@@ -11,33 +11,45 @@ const LOGOUT_URL = '/logout'
 const REDIRECT_URL = '/'
 
 export const useAuthStore = defineStore('auth', () => {
-    const user = ref(null)
+  const user = ref({
+    id: null,
+    name: null,
+    email: null,
+  })
 
-    const login = async (payload) => {
-        try {
-            const {data} = await axios.post(LOGIN_URL, payload)
+  const fetch = async () => {
+    try {
+      const {data} = await axios.get('/user')
 
-            user.value = data.user
-
-            window.location.href = REDIRECT_URL
-        } catch (error) {
-            serverErrorHandler(toast, error)
-        }
+      user.value = data
+    } catch (error) {
+      serverErrorHandler(toast, error)
     }
+  }
 
-    const logout = async () => {
-        try {
-            await axios.post(LOGOUT_URL)
+  const login = async (payload) => {
+    try {
+      const {data} = await axios.post(LOGIN_URL, payload)
 
-            window.location.href = LOGIN_PAGE_URL
-        } catch (error) {
-            serverErrorHandler(toast, error)
-        }
+      user.value = data.user
+
+      window.location.href = REDIRECT_URL
+    } catch (error) {
+      serverErrorHandler(toast, error)
     }
+  }
 
-    return {
-        user,
-        login,
-        logout,
+  const logout = async () => {
+    try {
+      await axios.post(LOGOUT_URL)
+
+      window.location.href = LOGIN_PAGE_URL
+    } catch (error) {
+      serverErrorHandler(toast, error)
     }
+  }
+
+  return {
+    user, login, logout, fetch
+  }
 })

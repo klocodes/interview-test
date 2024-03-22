@@ -1,8 +1,8 @@
 <script setup>
 const props = defineProps({
-  action: {
+  href: {
     type: String,
-    default: 'create',
+    default: null,
   },
 
   disabled: {
@@ -10,13 +10,28 @@ const props = defineProps({
     default: false,
   },
 })
+
+const emit = defineEmits(['click'])
+
+const click = () => {
+  if (props.disabled) {
+    return
+  }
+
+  if (props.href !== null) {
+    window.location.href = props.href
+  }
+
+  emit('click')
+}
 </script>
 
 <template>
   <div
-      :class="[`--${props.action}`, {'btn-disabled': props.disabled}]"
-      class="btn btn-primary"
+    :class="[`--${props.action}`, {'btn-disabled': props.disabled}]"
+    class="btn btn-primary"
+    @click="click"
   >
-    <slot name="title"/>
+    <slot></slot>
   </div>
 </template>

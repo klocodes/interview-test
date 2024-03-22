@@ -98,20 +98,6 @@ services:
     networks:
       - backend
 
-  rabbitmq:
-    image: rabbitmq:${RABBITMQ_VERSION}-alpine
-    container_name: ${PROJECT_NAME}_rabbitmq
-    volumes:
-      - ./rabbitmq/config:/etc/rabbitmq
-      - ./rabbitmq/logs:/var/log/rabbitmq
-    environment:
-      RABBITMQ_DEFAULT_USER: "${RABBITMQ_DEFAULT_USER}"
-      RABBITMQ_DEFAULT_PASS: "${RABBITMQ_DEFAULT_PASS}"
-    ports:
-      - "${RABBITMQ_PORT}:${RABBITMQ_PORT}"
-    networks:
-      - backend
-
   redis:
     image: redis:latest
     ports:

@@ -12,4 +12,14 @@ class PagesController extends Controller
     {
         return Inertia::render('Home');
     }
+
+    public function operations(): InertiaResponse
+    {
+        return Inertia::render('Operations');
+    }
+
+    public function signIn(): InertiaResponse
+    {
+        return Inertia::render('SignIn');
+    }
 }

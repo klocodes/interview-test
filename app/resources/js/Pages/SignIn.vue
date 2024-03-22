@@ -13,8 +13,6 @@ import Button from "../Components/Button.vue";
 import Checkbox from "~/Components/Checkbox.vue";
 import PasswordControl from "~/Components/PasswordControl.vue";
 
-import Enter from "~/Icons/Enter.vue";
-
 const toast = useToast()
 
 const authStore = useAuthStore()
